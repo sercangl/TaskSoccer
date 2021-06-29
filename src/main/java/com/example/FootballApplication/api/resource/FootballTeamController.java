@@ -16,6 +16,7 @@ public class FootballTeamController {
 
     @PostMapping("/addTeam")
     public String saveTeam(@RequestBody FootballTeam footballteam) {
+       // System.out.println(footballteam);
         teamRepository.save(footballteam);
         return "Added Football team with id :" + footballteam.getTeamId();
     }

@@ -17,18 +17,24 @@ import java.util.List;
 @ToString
 @Document(collection = "FootballTeam")
 public class FootballTeam {
-    @Id
+    @JsonProperty("teamId")
     private int teamId;
-    private String teamName;
-    private String teamLeague;
-    private String teamLogo;
-    private String teamLocation;
-    private String teamYear;
-    private String teamColors;
-    private final List<Player> players;
 
-    
-    public FootballTeam(List<Player> players) {
-        this.players = players;
-    }
+    @JsonProperty("teamName")
+    private String teamName;
+
+    @JsonProperty("teamLeague")
+    private String teamLeague;
+
+    @JsonProperty("teamLogo")
+    private String teamLogo;
+
+    @JsonProperty("teamLocation")
+    private String teamLocation;
+
+    @JsonProperty("teamYear")
+    private String teamYear;
+
+    @JsonProperty("teamColors")
+    private String teamColors;
 }
